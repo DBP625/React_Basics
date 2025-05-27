@@ -6,6 +6,15 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  var person = {
+    name: "Denesh",
+    job: "Student",
+  };
+
+  var style = {
+    color: "blue",
+    background: "yellow",
+  };
   return (
     <>
       <div>
@@ -28,7 +37,14 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <h1 style={style}>My name {person.name}</h1>
+
+      {/* first {} is to make it dynamic, inner{} is to operate*/}
+      <h1 style={{ color: "green", background: "yellow" }}>
+        I am a {person.job}
+      </h1>
       <p>My first React Paragraph</p>
+      <h2>{(2 + 5) * 25}</h2>
     </>
   );
 }
